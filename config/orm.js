@@ -12,7 +12,7 @@ const orm = {
     insertInto : function (tableName, newObj, callback) {
         conn.query("INSERT INTO ?? SET ?", [tableName, newObj], function (err, data) {
             if (err) throw err;
-            return callback(data);
+            return callback({id: data.insertId});
         });
     },
 
