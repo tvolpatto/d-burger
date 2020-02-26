@@ -15,9 +15,9 @@ module.exports = {
            callback(result);
        });
     },
-    insert : function(newBurger) {
+    insert : function(newBurger, callback) {
         orm.insertInto(TABLE_NAME, newBurger, (result)=>{
-            console.log(result);
+            callback(result);
         });
     }
 };
