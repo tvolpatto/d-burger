@@ -2,18 +2,18 @@ const conn = require("./connection");
 
 const orm = {
 
-    selectAll = function (tableName, callback) {
+    selectAll : function (tableName, callback) {
         conn.query("SELECT * FROM ??", [tableName], function (err, data) {
             if (err) throw err;
             return callback(data);
         });
     },
 
-    insertInto = function () {
+    insertInto : function () {
         console.log("Not implemented");
     },
 
-    updateOne = function () {
+    updateOne : function () {
         console.log("Not implemented");
     }
 

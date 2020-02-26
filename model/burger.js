@@ -1,7 +1,7 @@
 const orm = require("../config/orm");
 
-modules.export = {
-    selectAll = function() {
+module.exports = {
+    selectAll : function() {
        orm.selectAll("burgers", (data) => {
            console.log(data);
        });

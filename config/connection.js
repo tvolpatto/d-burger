@@ -10,7 +10,7 @@ const connection = mysql.createConnection({
     user: "root",
 
     // Your password
-    password: "",
+    password: process.env.MYSQL_PASSWORD,
     database: "burgers_db"
 });
 
