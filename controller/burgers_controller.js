@@ -6,12 +6,22 @@ const burger = require("../model/burger");
 
 router.get("/", function (req, res) {
     burger.selectAll(function (data) {
-
         var result = {
-            burgers: data,
+            devoureds: [],
+            nonDevoureds: []
         };
-        console.log(result);
 
+        data.map(r => {
+            if (r.devoured === 1) {
+                r.devoured = true;
+                result.devoureds.push(r);
+            } else {
+                r.devoured = false;
+                result.nonDevoureds.push(r);
+            }
+        });
+
+        res.render("index", result);
     });
 });
 
