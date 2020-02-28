@@ -1,28 +1,40 @@
 <div class="img-container">
     <img src="/assets/img/burger.png" />
-</div>  
+</div>
 <div class="container">
-    <div class="left">
-        <ol class="non-devoured">
-            {{#each nonDevoureds}}
-            <li>
-                <div class="non-devoured-item">
-                    <p>{{burger_name}}</p>
-                </div>
-                <button class="btn-devour">Devour it!</button>
-            </li>
-            {{/each}}
-        </ol>
+    <h2>Eat-Da-Burger</h2>
+    <div class="lists">
+        <div class="left">
+            <ol class="non-devoured">
+                {{#each nonDevoureds}}
+                <li>
+                    <div class="non-devoured-item">
+                        <p>{{burger_name}}</p>
+                    </div>
+                    <button class="btn-devour">Devour it!</button>
+                </li>
+                {{/each}}
+            </ol>
+        </div>
+        <div class="right">
+            <ol class="devoured">
+                {{#each devoureds}}
+                <li>
+                    <div class="devoured-item">
+                        <p>{{burger_name}}</p>
+                    </div>
+                </li>
+                {{/each}}
+            </ol>
+        </div>
     </div>
-    <div class="right">
-        <ol class="devoured">
-            {{#each devoureds}}
-            <li>
-                <div class="devoured-item">
-                    <p>{{burger_name}}</p>
-                </div>
-            </li>
-            {{/each}}
-        </ol>
+
+    <div class="new-burger">
+        <form class="create-form">
+            <textarea class="form-control" id="burger_name" rows="1" maxlength="50"></textarea>
+            <br>
+            <button id="btn-submit" type="submit">Submit</button>
+        </form>
+        <p>Enter a burger you want to eat and click the Submit button!</p>
     </div>
 </div>

@@ -1,4 +1,4 @@
-.container {
+.lists {
     background-color: chocolate;
     padding: 10px;
     margin: auto;
@@ -10,8 +10,7 @@
     padding: 10px;
     margin: auto;
     display: flex;
-    justify-content: center;
-    
+    justify-content: center;   
 }
 .left {
     background-color: aqua;
@@ -29,7 +28,7 @@
 .non-devoured {
     background-color: cornsilk;
 }
-.non-devoured-item{
+.non-devoured-item {
     background-color: white;
     width: 65%;
     border: 1px solid black; 
@@ -44,11 +43,34 @@
     background-color: cadetblue;
 }
 
-.devoured-item{
+.devoured-item {
     background-color: white;
     border: 1px solid black; 
     margin: 5px auto;
     width: 65%;
+}
+
+.new-burger {
+    width: 30%;   
+    padding: 10px;
+    margin: auto;
+    background-color: green;
+    justify-content: center;   
+}
+
+.create-form {
+    width: 90%;
+    background-color: indianred;
+}
+
+#btn-submit {
+    margin-left: 45%;
+    margin-top: 5px;
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    border-color: blue;
+    border-radius: 5px;
 }
 
 li {
@@ -60,6 +82,21 @@ p {
 }
 
 img {
-    max-height: 300px;
-    max-width: 300px;
+    max-height: 250px;
+    max-width: 250px;
+}
+
+h2 {
+    width: 80%;
+    margin: auto;
+    color: brown; 
+    text-align: center;   
+}
+
+textarea {
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    text-align: center;
+    resize: none;
 }
