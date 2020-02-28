@@ -6,7 +6,11 @@ $(() => {
             burger_name: $("#burger_name").val().trim(),
         };
 
-        addNewBurger(newBurger);
+        if(newBurger.burger_name ==="") {
+            displayErrorMsg();
+        } else {
+            addNewBurger(newBurger);
+        }
     });
 
     $(".btn-devour").on("click", function(event) {
@@ -31,3 +35,17 @@ function devourBurger(id) {
         location.reload();
     });
 }
+
+function displayErrorMsg() {
+    var spanErr = $("#error-msg");
+    
+    spanErr.removeClass("display-none");
+
+    var txtArea = $("#burger_name");
+    txtArea.addClass("border-error");
+    setTimeout(() => {
+        spanErr.addClass("display-none");
+        txtArea.removeClass("border-error");
+      }, 2000);
+    
+  }

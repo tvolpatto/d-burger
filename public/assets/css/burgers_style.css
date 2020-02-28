@@ -94,3 +94,17 @@ textarea {
 body {
     background-color: rgb(211, 112, 80);
 }
+
+#error-msg {
+    font-weight: bolder;
+    color: red;
+}
+
+.display-none {
+    display: none;
+}
+
+.border-error {
+    border: 2px solid red; 
+    border-radius: 5px;
+}
