@@ -36,7 +36,7 @@
 }
 
 .btn-devour {
-    margin: 5%;
+    margin: 4%;
 }
 
 .devoured {
@@ -46,7 +46,7 @@
 .devoured-item {
     background-color: white;
     border: 1px solid black; 
-    margin: 5px auto;
+    margin: 2.5px auto;
     width: 65%;
 }
 
