@@ -1,5 +1,4 @@
 .lists {
-    background-color: chocolate;
     padding: 10px;
     margin: auto;
     width: 80%;
@@ -13,21 +12,16 @@
     justify-content: center;   
 }
 .left {
-    background-color: aqua;
     width: 50%;
     float: left;
     padding: 5px;
 }
 
-.right {
-    background-color: brown;   
+.right {  
     width: 50%;
     padding: 5px;  
 }
 
-.non-devoured {
-    background-color: cornsilk;
-}
 .non-devoured-item {
     background-color: white;
     width: 65%;
@@ -37,10 +31,6 @@
 
 .btn-devour {
     margin: 4%;
-}
-
-.devoured {
-    background-color: cadetblue;
 }
 
 .devoured-item {
@@ -54,13 +44,11 @@
     width: 30%;   
     padding: 10px;
     margin: auto;
-    background-color: green;
     justify-content: center;   
 }
 
 .create-form {
     width: 90%;
-    background-color: indianred;
 }
 
 #btn-submit {
@@ -99,4 +87,8 @@ textarea {
     margin: auto;
     text-align: center;
     resize: none;
+}
+
+body {
+    background-color: rgb(172, 99, 74);
 }

@@ -13,7 +13,6 @@ $(() => {
         devourBurger($(this).attr("data"));
     });
 
-
 });
 
 function addNewBurger(newBurger) {
