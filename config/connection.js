@@ -1,19 +1,16 @@
 const mysql = require("mysql");
 
-var connection;
-
-if(process.env.JAWS_URL) {
-    connection = mysql.createConnection(process.env.JAWS_URL);
+var conn;
+  //connect to database
+if(process.env.JAWSDB_URL) {
+    conn = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
-    connection = mysql.createConnection({
-       host: "localhost",
-   
+    conn = mysql.createConnection({
+       host: "localhost",  
        // Your port; if not 3306
-       port: 3306,
-   
+       port: 3306,  
        // Your username
-       user: "root",
-   
+       user: "root", 
        // Your password
        password: process.env.MYSQL_PASSWORD,
        database: "burgers_db"
@@ -21,9 +18,9 @@ if(process.env.JAWS_URL) {
 
 }
 
-connection.connect(function (err) {
+conn.connect(function (err) {
     if (err) throw err;
-    console.log("connected as id " + connection.threadId);
+    console.log("connected as id " + conn.threadId);
 });
 
-module.exports = connection;
+module.exports = conn;
