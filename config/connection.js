@@ -1,11 +1,11 @@
 const mysql = require("mysql");
 
-var conn;
-  //connect to database
+var connection;
+
 if(process.env.JAWSDB_URL) {
-    conn = mysql.createConnection(process.env.JAWSDB_URL);
+    connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
-    conn = mysql.createConnection({
+    connection = mysql.createConnection({
        host: "localhost",  
        // Your port; if not 3306
        port: 3306,  
@@ -18,9 +18,9 @@ if(process.env.JAWSDB_URL) {
 
 }
 
-conn.connect(function (err) {
+connection.connect(function (err) {
     if (err) throw err;
-    console.log("connected as id " + conn.threadId);
+    console.log("connected as id " + connection.threadId);
 });
 
-module.exports = conn;
+module.exports = connection;
